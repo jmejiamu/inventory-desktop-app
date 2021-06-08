@@ -21,8 +21,8 @@ public class Main {
         
         Inventory inventory = new Inventory("test", 0, 0, new Date("06/06/1991"), "electronics");
         
-        PersistenceController con =  new PersistenceController();
-        con.createInventory(inventory);
+//        PersistenceController con =  new PersistenceController();
+//        con.createInventory(inventory);
     }
     
 }
