@@ -28,8 +28,7 @@ public class Inventory implements Serializable {
     public Inventory() {
     }
 
-    public Inventory(Long id, String item_name, int item_num, int item_code, Date date, String item_type) {
-        this.id = id;
+    public Inventory(String item_name, int item_num, int item_code, Date date, String item_type) {
         this.item_name = item_name;
         this.item_num = item_num;
         this.item_code = item_code;
