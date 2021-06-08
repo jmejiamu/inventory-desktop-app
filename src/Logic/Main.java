@@ -19,10 +19,13 @@ public class Main {
          //Center window
         mainWindow.setLocationRelativeTo(null);
         
-        Inventory inventory = new Inventory("test", 0, 0, new Date("06/06/1991"), "electronics");
+//        Inventory inventory = new Inventory("test", 0, 0, new Date("06/06/1991"), "electronics");
         
 //        PersistenceController con =  new PersistenceController();
 //        con.createInventory(inventory);
+          Inventory inventory = new Inventory();
+          PersistenceController con =  new PersistenceController();
+          con.createInventory(inventory);
     }
     
 }

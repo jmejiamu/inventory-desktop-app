@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import Logic.Inventory;
 import java.util.Date;
 
 /**
@@ -13,6 +14,7 @@ import java.util.Date;
  */
 public class MainWindow extends javax.swing.JFrame {
 
+    Inventory inventory = new Inventory();
     /**
      * Creates new form MainWindow
      */
@@ -185,6 +187,15 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        String itemName = item_name.getText();
+        int item_num = Integer.parseInt(num_of_Item.getText());
+        int itemCode = Integer.parseInt(item_code.getText());
+        String itemType = (String) item_type.getSelectedItem();
+        Date date = jCalendar.getDate();
+        
+        
+        
+        inventory.createData(itemName, item_num,itemCode, itemType, date);
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void num_of_ItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_of_ItemActionPerformed
@@ -198,10 +209,9 @@ public class MainWindow extends javax.swing.JFrame {
         num_of_Item.setText("");
         item_type.setSelectedIndex(0);
         jCalendar.setDate(new Date());
-        
+
     }//GEN-LAST:event_btnClearActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
