@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Logic;
 
-/**
- *
- * @author joch_
- */
+import Persistence.PersistenceController;
+import java.util.Date;
+
 public class Item {
+
+    public void createData(String itemName, int item_num, int itemCode, String itemType, Date date) {
+        Inventory inventory = new Inventory(itemName, item_num, itemCode, date, itemType);
+        
+        PersistenceController con =  new PersistenceController();
+        con.createInventory(inventory);
+        
+        
+    }
     
 }

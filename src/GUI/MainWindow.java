@@ -6,6 +6,8 @@
 package GUI;
 
 import Logic.Inventory;
+import Logic.Item;
+import com.toedter.calendar.JDateChooser;
 import java.util.Date;
 
 /**
@@ -14,7 +16,8 @@ import java.util.Date;
  */
 public class MainWindow extends javax.swing.JFrame {
 
-    Inventory inventory = new Inventory();
+    Item item = new Item();
+    
     /**
      * Creates new form MainWindow
      */
@@ -160,7 +163,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnClear))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -185,17 +188,18 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_item_typeActionPerformed
 
+    
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        
         String itemName = item_name.getText();
         int item_num = Integer.parseInt(num_of_Item.getText());
         int itemCode = Integer.parseInt(item_code.getText());
         String itemType = (String) item_type.getSelectedItem();
         Date date = jCalendar.getDate();
         
+        item.createData(itemName, item_num,itemCode, itemType, date);
         
-        
-        inventory.createData(itemName, item_num,itemCode, itemType, date);
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void num_of_ItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_of_ItemActionPerformed
