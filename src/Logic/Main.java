@@ -20,11 +20,8 @@ public class Main {
         //Center window
         mainWindow.setLocationRelativeTo(null);
 
-
-
-
-
-
+        Item item = new Item();
+        item.getAllItem();
     }
 
 }
