@@ -19,9 +19,10 @@ public class AllData extends javax.swing.JFrame {
     /**
      * Creates new form AllData
      */
-    InventoryController item = new InventoryController();
+    InventoryController inventoryController ;
     public AllData() {
         initComponents();
+       inventoryController = new InventoryController();
     }
 
     /**
