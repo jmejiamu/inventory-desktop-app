@@ -6,7 +6,7 @@
 package GUI;
 
 import Logic.Inventory;
-import Logic.Item;
+import Logic.InventoryController;
 import com.toedter.calendar.JDateChooser;
 import java.util.Date;
 
@@ -16,7 +16,7 @@ import java.util.Date;
  */
 public class MainWindow extends javax.swing.JFrame {
 
-    Item item = new Item();
+    InventoryController item = new InventoryController();
     
     /**
      * Creates new form MainWindow

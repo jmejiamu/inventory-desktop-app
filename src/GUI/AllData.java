@@ -6,7 +6,7 @@
 package GUI;
 
 import Logic.Inventory;
-import Logic.Item;
+import Logic.InventoryController;
 import Persistence.PersistenceController;
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class AllData extends javax.swing.JFrame {
     /**
      * Creates new form AllData
      */
-    Item item = new Item();
+    InventoryController item = new InventoryController();
     public AllData() {
         initComponents();
     }
@@ -170,5 +170,6 @@ public class AllData extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private java.awt.TextField textField2;
     // End of variables declaration//GEN-END:variables
 }

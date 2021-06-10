@@ -5,7 +5,7 @@ import Persistence.PersistenceController;
 import java.util.Date;
 import java.util.List;
 
-public class Item {
+public class InventoryController {
 
     public void createData(String itemName, int item_num, int itemCode, String itemType, Date date) {
         Inventory inventory = new Inventory(itemName, item_num, itemCode, date, itemType);

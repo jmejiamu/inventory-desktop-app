@@ -56,14 +56,14 @@
                           <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                           <Component id="details" min="-2" pref="137" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" pref="66" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextField2" min="-2" pref="77" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="jTextField3" min="-2" pref="113" max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="395" max="32767" attributes="0"/>
+                  <EmptySpace pref="400" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -116,10 +116,29 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField1"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField2"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.TextField" name="textField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="textField1"/>
+          </Properties>
+        </Component>
+        <Component class="java.awt.TextField" name="textField2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="textField2"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jTextField3"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

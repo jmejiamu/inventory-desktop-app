@@ -20,7 +20,7 @@ public class Main {
         //Center window
         mainWindow.setLocationRelativeTo(null);
 
-        Item item = new Item();
+        InventoryController item = new InventoryController();
         item.getAllItem();
     }
 
