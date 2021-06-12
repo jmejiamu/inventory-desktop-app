@@ -45,4 +45,8 @@ public class InventoryController {
         con.updateStackedData(inventory);
     }
 
+    public void deletItem(String id) {
+        con.deleteAItem(Long.parseLong(id));
+    }
+
 }
