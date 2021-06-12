@@ -7,10 +7,17 @@ import java.util.List;
 public class InventoryController {
 
     PersistenceController con = new PersistenceController();
+    Inventory inventory = new Inventory();
+    
 
     public void createData(String itemName, int item_num, int itemCode, String itemType, Date date) {
-        Inventory inventory = new Inventory(itemName, item_num, itemCode, date, itemType);
-        // Use Set instead
+        
+        inventory.setItem_name(itemName);
+        inventory.setItem_num(item_num);
+        inventory.setItem_code(itemCode);
+        inventory.setItem_type(itemType);
+        inventory.setDate(date);
+        
         con.createInventory(inventory);
 
     }
