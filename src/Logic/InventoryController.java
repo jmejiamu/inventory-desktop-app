@@ -22,7 +22,8 @@ public class InventoryController {
 
     }
 
-    // fix this
+    // fix this-- this is not in used
+    
     public void getAllItem() {
         PersistenceController con = new PersistenceController();
         List<Inventory> inventoryList = con.getAllData();
