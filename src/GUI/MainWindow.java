@@ -200,7 +200,9 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_item_typeActionPerformed
 
-    
+    public static void clean(){
+        
+    }
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
@@ -211,6 +213,13 @@ public class MainWindow extends javax.swing.JFrame {
         Date date = jCalendar.getDate();
         
         item.createData(itemName, item_num,itemCode, itemType, date);
+        
+        item_name.setText("");
+        num_of_Item.setText("");
+        item_code.setText("");
+        item_type.setSelectedIndex(0);
+        jCalendar.setDate(new Date());
+        
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
