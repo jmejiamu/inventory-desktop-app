@@ -20,5 +20,13 @@ public class PersistenceController {
         List<Inventory> inventoryList = inventoryJpa.findInventoryEntities();
         return inventoryList;
     }
+
+    public void updateStackedData(Inventory inventory) {
+        try {
+            inventoryJpa.edit(inventory);
+        } catch (Exception ex) {
+            Logger.getLogger(PersistenceController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

@@ -292,10 +292,9 @@ public class AllData extends javax.swing.JFrame {
         int code = Integer.parseInt(codeInput.getText());
         String itemName = nameInput.getText();
         int itemNum = Integer.parseInt(numOfItemInput.getText());
-//            String itemType = in.getItem_type();
-        System.out.println(">>" + codeInput.getText());
-
-//        inventoryController.updateInventory();
+        String itemType = (String) typeInput.getSelectedItem();
+        
+        inventoryController.updateInventory( itemDate, code, itemName, itemNum, itemType);
     }//GEN-LAST:event_bntUpdateActionPerformed
 
     private void nameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameInputActionPerformed

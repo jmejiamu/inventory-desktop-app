@@ -34,4 +34,14 @@ public class InventoryController {
 
     }
 
+    public void updateInventory( Date itemDate, int code, String itemName, int itemNum, String itemType) {
+        inventory.setDate(itemDate);
+        inventory.setItem_code(code);
+        inventory.setItem_name(itemName);
+        inventory.setItem_num(itemNum);
+        inventory.setItem_type(itemType);
+        
+        con.updateStackedData(inventory);
+    }
+
 }
