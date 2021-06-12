@@ -48,10 +48,8 @@ public class AllData extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        stackedDate = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
         codeInput = new javax.swing.JTextField();
         nameInput = new javax.swing.JTextField();
@@ -101,8 +99,6 @@ public class AllData extends javax.swing.JFrame {
 
         jLabel3.setText("Name: ");
 
-        jLabel4.setText("Stacked Data:");
-
         jLabel5.setText("Num of Item:");
 
         jLabel6.setText("Code: ");
@@ -126,6 +122,8 @@ public class AllData extends javax.swing.JFrame {
 
         jLabel2.setText("Id:");
 
+        idInput.setEditable(false);
+
         typeInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Computers", "Shoes", "Phones", "Cloths" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -148,15 +146,13 @@ public class AllData extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
                     .addComponent(jLabel6)
                     .addComponent(jLabel3)
                     .addComponent(jLabel5)
                     .addComponent(jLabel7)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(stackedDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(codeInput)
                     .addComponent(nameInput)
                     .addComponent(numOfItemInput, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
@@ -176,18 +172,17 @@ public class AllData extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(idInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addComponent(jButton2)
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel4))
-                    .addComponent(stackedDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(32, 32, 32))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(idInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(27, 27, 27)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntUpdate)
                     .addComponent(codeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -312,7 +307,6 @@ public class AllData extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -321,7 +315,6 @@ public class AllData extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField nameInput;
     private javax.swing.JTextField numOfItemInput;
-    private com.toedter.calendar.JDateChooser stackedDate;
     private java.awt.TextField textField1;
     private java.awt.TextField textField2;
     private javax.swing.JComboBox<String> typeInput;
