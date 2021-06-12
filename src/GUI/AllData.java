@@ -287,14 +287,14 @@ public class AllData extends javax.swing.JFrame {
 
     private void bntUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntUpdateActionPerformed
         // TODO add your handling code here:
-        int id = Integer.parseInt(idInput.getText());
+        String id = idInput.getText();
         Date itemDate = new Date();
         int code = Integer.parseInt(codeInput.getText());
         String itemName = nameInput.getText();
         int itemNum = Integer.parseInt(numOfItemInput.getText());
         String itemType = (String) typeInput.getSelectedItem();
         
-        inventoryController.updateInventory( itemDate, code, itemName, itemNum, itemType);
+        inventoryController.updateInventory(id, itemDate, code, itemName, itemNum, itemType);
     }//GEN-LAST:event_bntUpdateActionPerformed
 
     private void nameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameInputActionPerformed
