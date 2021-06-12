@@ -17,7 +17,7 @@ import java.util.Date;
 public class MainWindow extends javax.swing.JFrame {
 
     InventoryController item = new InventoryController();
-    
+
     /**
      * Creates new form MainWindow
      */
@@ -200,27 +200,29 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_item_typeActionPerformed
 
-    public static void clean(){
-        
-    }
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
-        
-        String itemName = item_name.getText();
-        int item_num = Integer.parseInt(num_of_Item.getText());
-        int itemCode = Integer.parseInt(item_code.getText());
-        String itemType = (String) item_type.getSelectedItem();
-        Date date = jCalendar.getDate();
-        
-        item.createData(itemName, item_num,itemCode, itemType, date);
-        
+    public void clean() {
         item_name.setText("");
         num_of_Item.setText("");
         item_code.setText("");
         item_type.setSelectedIndex(0);
         jCalendar.setDate(new Date());
+    }
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+
+        String itemName = item_name.getText();
+        int item_num = Integer.parseInt(num_of_Item.getText());
+        int itemCode = Integer.parseInt(item_code.getText());
+        String itemType = (String) item_type.getSelectedItem();
+        Date date = jCalendar.getDate();
+
+        // sending data to the create method
+        item.createData(itemName, item_num, itemCode, itemType, date);
         
-        
+        // Clean after data has been submited
+        clean();
+
+
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void num_of_ItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_of_ItemActionPerformed
@@ -229,14 +231,12 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
-        item_name.setText("");
-        item_code.setText("");
-        num_of_Item.setText("");
-        item_type.setSelectedIndex(0);
-        jCalendar.setDate(new Date());
+
+        clean();
 
     }//GEN-LAST:event_btnClearActionPerformed
 
+    // This btn takes you the show all data screen
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         AllData allData = new AllData();
