@@ -29,7 +29,7 @@ public class InventoryController {
         List<Inventory> inventoryList = con.getAllData();
         for (Inventory in : inventoryList) {
             in.getItem_name();
-            System.out.println("<><><" + in.getItem_name());
+            System.out.println(">" + in.getItem_name());
         }
 
     }
