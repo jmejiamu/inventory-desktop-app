@@ -9,6 +9,7 @@ import Logic.Inventory;
 import Logic.InventoryController;
 import com.toedter.calendar.JDateChooser;
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -234,19 +235,23 @@ public class MainWindow extends javax.swing.JFrame {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
 
-        String itemName = item_name.getText();
-        int item_num = Integer.parseInt(num_of_Item.getText());
-        int itemCode = Integer.parseInt(item_code.getText());
-        String itemType = (String) item_type.getSelectedItem();
-        Date date = jCalendar.getDate();
-
-        // sending data to the create method
-        item.createData(itemName, item_num, itemCode, itemType, date);
-        
-        // Clean after data has been submited
-        clean();
-
-
+        if (item_name.getText().equals("") || num_of_Item.getText().equals("") || item_code.getText().equals("") || item_type.getSelectedItem().equals("-") || jCalendar.getDate() == null) {
+            JOptionPane.showMessageDialog(this, "Field is empty");
+        } else {
+            String itemName = item_name.getText();
+            int item_num = Integer.parseInt(num_of_Item.getText());
+            int itemCode = Integer.parseInt(item_code.getText());
+            String itemType = (String) item_type.getSelectedItem();
+            Date date = jCalendar.getDate();
+            
+            // sending data to the create method
+            item.createData(itemName, item_num, itemCode, itemType, date);
+            
+            JOptionPane.showMessageDialog(this, "Saved data successfull");
+            
+            // Clean after data has been submited
+            clean();
+        }
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void num_of_ItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_of_ItemActionPerformed
