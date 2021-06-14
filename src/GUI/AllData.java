@@ -319,6 +319,13 @@ public class AllData extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTable1MouseClicked
 
+    public void clean(){
+        idInput.setText("");
+        nameInput.setText("");
+        numOfItemInput.setText("");
+        codeInput.setText("");
+        typeInput.setSelectedIndex(0);
+    }
     private void bntUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntUpdateActionPerformed
         // TODO add your handling code here:
 
@@ -335,6 +342,9 @@ public class AllData extends javax.swing.JFrame {
             inventoryController.updateInventory(id, itemDate, code, itemName, itemNum, itemType);
             
             JOptionPane.showMessageDialog(this, "Data Updated!");
+            
+            clean();
+            
         }
     }//GEN-LAST:event_bntUpdateActionPerformed
 
