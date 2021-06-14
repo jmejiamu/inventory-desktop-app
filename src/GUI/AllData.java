@@ -10,6 +10,7 @@ import Logic.InventoryController;
 import Persistence.PersistenceController;
 import java.util.Date;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -320,14 +321,21 @@ public class AllData extends javax.swing.JFrame {
 
     private void bntUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntUpdateActionPerformed
         // TODO add your handling code here:
-        String id = idInput.getText();
-        Date itemDate = new Date();
-        int code = Integer.parseInt(codeInput.getText());
-        String itemName = nameInput.getText();
-        int itemNum = Integer.parseInt(numOfItemInput.getText());
-        String itemType = (String) typeInput.getSelectedItem();
-        
-        inventoryController.updateInventory(id, itemDate, code, itemName, itemNum, itemType);
+
+        if (nameInput.getText().equals("") || numOfItemInput.getText().equals("") || codeInput.getText().equals("") || typeInput.getSelectedItem().equals("-")) {
+            JOptionPane.showMessageDialog(this, "Field is empty, Select an item from the table");
+        } else {
+            String id = idInput.getText();
+            Date itemDate = new Date();
+            int code = Integer.parseInt(codeInput.getText());
+            String itemName = nameInput.getText();
+            int itemNum = Integer.parseInt(numOfItemInput.getText());
+            String itemType = (String) typeInput.getSelectedItem();
+
+            inventoryController.updateInventory(id, itemDate, code, itemName, itemNum, itemType);
+            
+            JOptionPane.showMessageDialog(this, "Data Updated!");
+        }
     }//GEN-LAST:event_bntUpdateActionPerformed
 
     private void nameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameInputActionPerformed
@@ -337,7 +345,7 @@ public class AllData extends javax.swing.JFrame {
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
         String id = idInput.getText();
-        
+
         inventoryController.deletItem(id);
     }//GEN-LAST:event_btnDeleteActionPerformed
 
