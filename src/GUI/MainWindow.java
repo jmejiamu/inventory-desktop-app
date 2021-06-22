@@ -236,7 +236,7 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if (item_name.getText().equals("") || num_of_Item.getText().equals("") || item_code.getText().equals("") || item_type.getSelectedItem().equals("-") || jCalendar.getDate() == null) {
-            JOptionPane.showMessageDialog(this, Constant.Constant.FILE_EMPTY);
+            JOptionPane.showMessageDialog(this, Constant.Constant.FIELD_EMPTY);
         } else {
             String itemName = item_name.getText();
             int item_num = Integer.parseInt(num_of_Item.getText());

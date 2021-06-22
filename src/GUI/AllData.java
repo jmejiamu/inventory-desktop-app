@@ -341,7 +341,7 @@ public class AllData extends javax.swing.JFrame {
 
             inventoryController.updateInventory(id, itemDate, code, itemName, itemNum, itemType);
             
-            JOptionPane.showMessageDialog(this, "Data Updated!");
+            JOptionPane.showMessageDialog(this, Constant.Constant.UPDATE_MESSAGE);
             
             clean();
             
