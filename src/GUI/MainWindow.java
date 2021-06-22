@@ -247,7 +247,7 @@ public class MainWindow extends javax.swing.JFrame {
             // sending data to the create method
             item.createData(itemName, item_num, itemCode, itemType, date);
             
-            JOptionPane.showMessageDialog(this, "Saved data successfull");
+            JOptionPane.showMessageDialog(this, Constant.Constant.SAVE_DATA);
             
             // Clean after data has been submited
             clean();
